@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=a_AT7cEN_9I">Watch the og demo</a> · <a href="https://docs.plannotator.ai/open-source/start/installation">Installation guide</a> · <a href="https://plannotator.ai/">Official site</a> · <a href="https://github.com/plannotator/effective-html">Visual HTML Skills</a>
+  <a href="https://www.youtube.com/watch?v=a_AT7cEN_9I">Watch the og demo</a> · <a href="https://docs.plannotator.ai/open-source/start/installation">Installation guide</a> · <a href="https://plannotator.ai/">Official site</a> · <a href="https://github.com/plannotator/effective-html">Visual HTML Skills</a> · <a href="#herdr-annotate-plannotator-in-the-terminal">Herdr Annotate</a>
 </p>
 
 # Plannotator
@@ -84,6 +84,24 @@ Review local changes or remote PRs. Comment on diffs, suggest code. Your comment
   <img src=".github/assets/html.webp" alt="Annotating a rendered HTML artifact" width="720" />
 </p>
 
+## Herdr Annotate: Plannotator in the Terminal
+
+<p align="center">
+  <a href="https://github.com/plannotator/herdr-annotate">
+    <img src=".github/assets/herdr-annotate-banner.svg" alt="Herdr Annotate" width="300" align="middle" />
+  </a>
+  &nbsp;&nbsp;
+  <img src=".github/assets/herdr-annotate.png" alt="Plannotator TUI annotating a markdown folder in the terminal" width="480" align="middle" />
+</p>
+
+[Herdr Annotate](https://github.com/plannotator/herdr-annotate) brings Plannotator-style review to the terminal: annotate terminal text, review whole Markdown documents and your coding agent's replies inside [Herdr](https://herdr.dev), and send the feedback straight back to the agent as its next message. Works with Claude Code, Codex, Pi, Copilot CLI, and Droid replies. Annotations are saved in the Plannotator data directory, so terminal reviews and app reviews compound.
+
+```
+herdr plugin install plannotator/herdr-annotate
+```
+
+Prefer it standalone? [Plannotator TUI](https://github.com/plannotator/plannotator-tui) powers the document review and runs without Herdr: `brew install plannotator/tap/plannotator-tui`.
+
 ---
 
 ## Commands
@@ -109,6 +127,7 @@ Need a realistic document to try? Copy the [product requirements document templa
 /plannotator-review <github-pr-url>    # Review a GitHub pull request
 /plannotator-review <gitlab-mr-url>    # Review a GitLab merge request
 plannotator review --gitbutler         # Review an active GitButler workspace
+plannotator review --patch-file reading.diff # Review a static caller-supplied unified diff
 ```
 
 GitButler users can review the whole workspace, one stack, or one branch layer. See the [GitButler workflow guide](https://docs.plannotator.ai/open-source/workflows/gitbutler).
